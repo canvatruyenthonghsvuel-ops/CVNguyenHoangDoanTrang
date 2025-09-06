@@ -15,32 +15,49 @@ import {
   Scale,
   Building,
 } from "lucide-react"
+import Image from "next/image"
 
 export default function Portfolio() {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-      <header className="bg-card border-b border-border">
-        <div className="container mx-auto px-6 py-8">
-          <div className="flex flex-col md:flex-row items-center gap-6">
-            <div className="w-32 h-32 bg-muted rounded-full flex items-center justify-center">
-              <Scale className="w-16 h-16 text-primary" />
+      <header className="bg-gradient-to-br from-card via-card to-primary/5 border-b border-border">
+        <div className="container mx-auto px-6 py-12">
+          <div className="flex flex-col md:flex-row items-center gap-8">
+            <div className="relative flex justify-center">
+              <div className="w-48 h-48 rounded-full overflow-hidden border-4 border-primary/20 shadow-xl bg-white">
+                <Image
+                  src="/images/profile-photo.jpg"
+                  alt="Nguyễn Hoàng Đoan Trang - Professional Portrait"
+                  width={192}
+                  height={192}
+                  className="w-full h-full object-cover object-center"
+                  priority
+                />
+              </div>
+              <div className="absolute -bottom-2 -right-2 w-14 h-14 bg-primary rounded-full flex items-center justify-center shadow-lg">
+                <Scale className="w-7 h-7 text-primary-foreground" />
+              </div>
             </div>
-            <div className="text-center md:text-left">
-              <h1 className="text-4xl font-bold text-foreground mb-2 text-balance">Nguyễn Hoàng Đoan Trang</h1>
-              <p className="text-xl text-muted-foreground mb-4">Sinh viên Luật Tài chính - Ngân hàng</p>
-              <div className="flex flex-wrap gap-4 justify-center md:justify-start text-sm text-muted-foreground">
-                <div className="flex items-center gap-2">
-                  <Phone className="w-4 h-4" />
-                  <span>0707481388</span>
+            <div className="text-center md:text-left flex-1">
+              <h1 className="text-6xl font-bold text-foreground mb-4 text-balance">Nguyễn Hoàng Đoan Trang</h1>
+              <p className="text-3xl text-primary font-medium mb-3">Sinh viên Luật Tài chính - Ngân hàng</p>
+              <p className="text-xl text-muted-foreground mb-8 max-w-2xl text-pretty">
+                Sinh viên năm 3 với GPA 8.067/10, có kinh nghiệm thực tập tại Tòa án và đam mê phát triển trong lĩnh vực
+                pháp lý dân sự
+              </p>
+              <div className="flex flex-wrap gap-6 justify-center md:justify-start text-base">
+                <div className="flex items-center gap-3 bg-card/50 px-5 py-3 rounded-full border">
+                  <Phone className="w-5 h-5 text-primary" />
+                  <span className="font-medium">0707481388</span>
                 </div>
-                <div className="flex items-center gap-2">
-                  <Mail className="w-4 h-4" />
-                  <span>nguyenhoangdoantrang.law@gmail.com</span>
+                <div className="flex items-center gap-3 bg-card/50 px-5 py-3 rounded-full border">
+                  <Mail className="w-5 h-5 text-primary" />
+                  <span className="font-medium">nguyenhoangdoantrang.law@gmail.com</span>
                 </div>
-                <div className="flex items-center gap-2">
-                  <MapPin className="w-4 h-4" />
-                  <span>TP. Hồ Chí Minh</span>
+                <div className="flex items-center gap-3 bg-card/50 px-5 py-3 rounded-full border">
+                  <MapPin className="w-5 h-5 text-primary" />
+                  <span className="font-medium">TP. Hồ Chí Minh</span>
                 </div>
               </div>
             </div>
