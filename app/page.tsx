@@ -98,7 +98,7 @@ export default function Portfolio() {
             <CardContent className="space-y-4">
               <div>
                 <h3 className="font-semibold text-lg text-foreground">
-                  Đại học Kinh tế - Luật, Đại học Quốc gia TP. Hồ Chí Minh
+                  Trường Đại học Kinh tế - Luật, Đại học Quốc gia TP. Hồ Chí Minh
                 </h3>
                 <p className="text-muted-foreground">Ngành: Luật Tài chính - Ngân hàng</p>
                 <p className="text-muted-foreground">Niên khóa: 2023 - 2027</p>
